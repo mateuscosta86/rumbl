@@ -1,2 +1,2 @@
 <h1>Showing User</h1>
-<p><%= first_name(@user) %></p> (<%= @user.id %>)
+<%= render "user.html", user: @user %>
