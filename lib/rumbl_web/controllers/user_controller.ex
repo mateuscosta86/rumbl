@@ -12,4 +12,9 @@ defmodule RumblWeb.UserController do
     user = Accounts.get_user(id)
     render(conn, "show.html", user: user)
   end
+
+  def new(comm, _params) do
+    changeset = Accounts.change_user(%User{})
+    render(conn, "new.html", changeset: changeset)
+  end
 end
